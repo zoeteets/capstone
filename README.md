@@ -18,8 +18,10 @@ Completion date: August 19, 2022      * in progress *
 
 ## Methodologies
   #### Gathering the Data
+  Using Python, I scrapped websites and created dataframes for analysis.
   
   #### Cleaning the Data
+  Extensive cleaning was needed when I discovered that The Academy of Motion Pictures has a number of films under a different title than imdb. 
   
   #### Analyzing the Data
   
