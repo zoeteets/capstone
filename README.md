@@ -1,4 +1,5 @@
-# Capstone for Nashville Software School
+# Capstone for Nashville Software School Data Analytics Program
+
 Completion date: August 19, 2022      * in progress *
 
 ## Table of Contents
