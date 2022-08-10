@@ -34,5 +34,7 @@ Completion date: August 19, 2022      * in progress *
       * Consumer Price Index from U.S. Bureau of Labor Statistics https://data.bls.gov/pdq/SurveyOutputServlet
 
 ## Technologies
+Python - pandas, numpy, seaborn, matplotlib
+SQL - Postgresql
 
 ## Conclusion
