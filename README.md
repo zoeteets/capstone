@@ -26,5 +26,12 @@ Completion date: August 19, 2022      * in progress *
 ## Technologies
 
 ## Methodologies
+  #### Gathering the Data
+  
+  #### Cleaning the Data
+  
+  #### Analyzing the Data
+  
+  #### Visualizing the Data
 
 ## Conclusion
