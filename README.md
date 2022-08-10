@@ -35,6 +35,7 @@ Completion date: August 19, 2022      * in progress *
 
 ## Technologies
 Python - pandas, numpy, seaborn, matplotlib
+
 SQL - Postgresql
 
 ## Conclusion
