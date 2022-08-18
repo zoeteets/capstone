@@ -13,19 +13,19 @@ Completion date: August 19, 2022      * in progress *
 
 
 ## Overview
-  The Academy of Motion Picture Arts and Sciences holds an annual ceremony, commonly known as the Oscars, to honor movies that premiered in theaters the previous year. For all categories excluding Best Picture, voters are contained to that field (i.e. actors vote for Best Actor, directors vote for Best Director, and so on). Best Picture is the only category in which all Academy members, currently standing at 10,000 members, get to submit a vote. Since the pool of voters is more diverse than other categories, I began to wonder what the data could tell us about how the winner for Best Picture is chosen. For this analysis, I focused on Best Picture nominees in years 1970 - 2020 (300 movies) and their gross revenue.
+  The Academy of Motion Picture Arts and Sciences holds an annual ceremony, commonly known as The Oscars, to honor movies that premiered in theaters the previous year. For all categories excluding Best Picture, voters are contained to that field (i.e. actors vote for Best Actor, directors vote for Best Director, and so on). Best Picture is the only category in which all Academy members, currently standing at 10,000 members, get to submit a vote. Since the pool of voters is more diverse than other categories, I began to wonder what the data could tell us about how the winner for Best Picture is chosen. For this analysis, I focused on Best Picture nominees in years 1970 - 2020 (300 movies) and their gross revenue.
 
 ## Data Question
   What is the relationship between gross revenue and winning an Oscar for Best Picture?
 
 ## Methodologies
   #### Gathering the Data
-  Using Python, I scrapped oscars.org for nominees, producers, years, and winner designation using loops to grab html elements and convert them into dictionaries for manipulation. I then created a combination of user defined functions and loops to iterate the scrape through multiple pages of the website. From there, I was able to transform these dictionaries into a single data frame. 
+  Using Python, I scrapped oscars.org for nominees, producers, years, and winner designation using loops to grab html elements and convert them into dictionaries for manipulation. It was crucial that I used a dictionary for this scrape so that I could identify a single winner from nominees for each year. I then created a combination of user defined functions and loops to repeat the scrape through multiple pages of the website. From there, I was able to transform these dictionaries into a single data frame. 
   To pull in data regarding movie details such as summary, rating, runtime, release year, and gross revenue, I used loops to scrape imdb.com and create a series of lists that were combined into a data frame. I repeated similar steps as with oscar.org and created a user defined function combined with loops to iterate through multiple pages.
   For both websites, I collected data on the entirety of the oscars history from 1929-2022.
   
   #### Cleaning the Data
-  Extensive cleaning was needed when I discovered that The Academy of Motion Pictures has a number of films under a different title than IMDB. I used regular expressions, data validation techniques, and fuzzy merges to clean and combine the data into a single data frame. Curious about the number of producers and title length, I used regular expressions to separate data that was comma delimited and funtions to create new columns based on calculations of the the cell values.
+  Extensive cleaning was needed when I discovered that The Academy of Motion Pictures has a number of movies under a different title than IMDB. I used regular expressions, data validation techniques, and fuzzy merges to clean and combine the data into a single data frame. Curious about the number of producers and title length, I used regular expressions to separate data that was comma delimited and funtions to create new columns based on calculations of the the cell values.
 
   #### Analyzing the Data
    After looking at the intial data, I decided to limit the number of years to 1963 - 2020, and later limited it to 1970-2020 to look at the gross reveunue across decades. I chose 1963 initially because that was the year The Academy created the category as we know it of "Best Picture". Additionally, it's worth noting that diversity and membership count increased after 1963 resulting in a larger voter pool. 
@@ -49,3 +49,4 @@ Python - pandas, numpy, seaborn, matplotlib
 Tableau - visualizations
 
 ## Conclusion
+  In the 50 years analyzed, never has a movie won Best Picture if it was the lowest grossing nominee for that year. Looking at winners and maximum gross, the most often a movie with the highest gross of all nomineees won Best Picture was during the 1980's with only 50% of the time. However, when we get to 2010 - 2020, the percent of movies that won with highest gross of all nominees that year drops to 0%. Upon further research into the changes of 2010, I found that The Academy changed the voting method from a single choice ballot to ranked choice voting. We can infer two conclusions from this analysis: 1) The Academy and the public have consistently valued different movies, and 2) ranked choice voting has resulted in the Best Picture being awarded to movies that made neither the highest nor lowest gross of that year. 
