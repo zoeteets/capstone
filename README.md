@@ -3,21 +3,20 @@
 Completion date: August 19, 2022      
 
 ## Table of Contents
-1. Overview
-2. Data Question
-3. Methodology
-4. Technologies
-5. Data Sources
-6. Challenges
-7. Conclusion
+1. [Overview](#overview)
+2. [Data Question](#dataquestion)
+3. [Methodology](#methodology)
+4. [Technologies](#technologies)
+5. [Data Sources](#datasources)
+6. [Conclusion](#conclusion)
 
-
+<a name="overview"></a>
 ## Overview
   The Academy of Motion Picture Arts and Sciences holds an annual ceremony, commonly known as The Oscars, to honor movies that premiered in theaters the previous year. For all categories excluding Best Picture, voters are contained to that field (i.e. actors vote for Best Actor, directors vote for Best Director, and so on). Best Picture is the only category in which all Academy members, currently standing at 10,000 members, get to submit a vote. Since the pool of voters is more diverse than other categories, I began to wonder what the data could tell us about how the winner for Best Picture is chosen. For this analysis, I focused on Best Picture nominees in years 1970 - 2020 (300 movies) and their gross revenue.
-
+<a name="dataquestion"></a>
 ## Data Question
   What is the relationship between gross revenue and winning an Oscar for Best Picture?
-
+<a name="methodology"></a>
 ## Methodologies
   #### Gathering the Data
   Using Python, I scrapped oscars.org for nominees, producers, years, and winner designation using loops to grab html elements and convert them into dictionaries for manipulation. It was crucial that I used a dictionary for this scrape so that I could identify a single winner from nominees for each year. I then created a combination of user defined functions and loops to repeat the scrape through multiple pages of the website. From there, I was able to transform these dictionaries into a single data frame. 
@@ -35,6 +34,12 @@ Completion date: August 19, 2022
   #### Visualizing the Data
    I utilized seaborn FacetGrids and matplotlib to create preliminary visualizations and then moved to Tableau to create visualizations that were more readable and understandable to the viewer. I imported the data into Tableau and created area charts and scatter plots to analyze the relationship between gross revenue and winning an award. I initially started with all 50 years, but found greater insight when breaking these years up into decades. 
 
+<a name="technologies"></a>
+## Technologies
+Python - pandas, numpy, seaborn, matplotlib
+
+Tableau - visualizations
+<a name="datasources"></a>
 ## Data Sources
   #### Webscraping
       * www.IMDB.com
@@ -42,12 +47,7 @@ Completion date: August 19, 2022
   
   #### Imported
       * Annual Consumer Price Index from U.S. Bureau of Labor Statistics
-
-## Technologies
-Python - pandas, numpy, seaborn, matplotlib
-
-Tableau - visualizations
-
+<a name="conclusion"></a>
 ## Conclusion
   In the 50 years analyzed, never has a movie won Best Picture if it was the lowest grossing nominee for that year. Looking at winners and maximum gross, the most often a movie with the highest gross of all nomineees won Best Picture was during the 1980's with only 50% of the time. However, when we get to 2010 - 2020, the percent of movies that won with highest gross of all nominees that year drops to 0%. This makes a total of 4.6% of movies in the last 50 years have both the highest gross and receive the award for Best Picture. Upon further research into the changes of 2010, I found that The Academy changed the voting method from a single choice ballot to ranked choice voting. We can conclude three observations from this analysis: 
   1) The lowest grossing movie is not the Best Picture
